@@ -63,4 +63,4 @@ print(negrito('\nRESPOSTA:'))
 print(f'O valor arredondado de pi é: {pi_arredondado}')
 
 # --------------------------------------
-
+#   TESTE MOMO, EU TE AMO MEU AMOR
