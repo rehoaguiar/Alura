@@ -3,7 +3,7 @@ import os
 import time
 
 # Criando uma lista de restaurantes
-restaurantes = []
+restaurantes = ['Le Touchè','Always']
 
 # Definindo Funções
 # Apresentação do nome do restaurante
@@ -41,10 +41,13 @@ def main():
     exibir_menu()
     escolher_opcao()
 
+def voltar_menu():
+    input('\nDigite uma tecla para voltar ao menu principal: ')
+    main()
+
 def opcao_invalida():
     print('\nOpção inválida')
-    input('Digite uma tecla para voltar ao menu principal: ')
-    main()
+    voltar_menu()
 
 def cadastrar_restaurante():
     limpar_tela()
@@ -57,8 +60,18 @@ def cadastrar_restaurante():
     nome_do_restaurante = input('\n\nDigite o nome do restaurante que deseja cadastrar: ')
     restaurantes.append(nome_do_restaurante)
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
-    input('\nDigite uma tecla para voltar ao menu principal: ')
-    main()
+    voltar_menu()
+
+def listar_restaurante():
+    limpar_tela()
+    print('''
+    █░░ █ █▀ ▀█▀ ▄▀█   █▀▄ █▀▀   █▀█ █▀▀ █▀ ▀█▀ ▄▀█ █░█ █▀█ ▄▀█ █▄░█ ▀█▀ █▀▀ █▀
+    █▄▄ █ ▄█ ░█░ █▀█   █▄▀ ██▄   █▀▄ ██▄ ▄█ ░█░ █▀█ █▄█ █▀▄ █▀█ █░▀█ ░█░ ██▄ ▄█\n''')
+
+    for restaurante in restaurantes:
+        print(f'. {restaurante}')
+    
+    voltar_menu()
 
 def escolher_opcao():
     # Definindo variáveos
@@ -69,7 +82,7 @@ def escolher_opcao():
             case 1:
                 cadastrar_restaurante()
             case 2:
-                print('Listar Restaurante')
+                listar_restaurante()
             case 3: 
                 print('Ativar Restaurante')
             case 4:
