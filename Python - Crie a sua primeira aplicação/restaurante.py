@@ -20,6 +20,11 @@ def limpar_tela():
     os.system('cls')
     # os.system('clear') # No Sistema MAC utilizamos o comando clear
 
+def montar_cabecalho(texto):
+    limpar_tela()
+    exibir_nome_app()
+    print(texto)
+
 # Opções do aplicativo
 def exibir_menu():
     print('\n1. Cadastrar Restaurante')
@@ -50,10 +55,7 @@ def opcao_invalida():
     voltar_menu()
 
 def cadastrar_restaurante():
-    limpar_tela()
-    exibir_nome_app()
-
-    print('''
+    montar_cabecalho('''
     █▀▀ ▄▀█ █▀▄ ▄▀█ █▀ ▀█▀ █▀█ █▀█   █▀▄ █▀▀   █▀█ █▀▀ █▀ ▀█▀ ▄▀█ █░█ █▀█ ▄▀█ █▄░█ ▀█▀ █▀▀ █▀
     █▄▄ █▀█ █▄▀ █▀█ ▄█ ░█░ █▀▄ █▄█   █▄▀ ██▄   █▀▄ ██▄ ▄█ ░█░ █▀█ █▄█ █▀▄ █▀█ █░▀█ ░█░ ██▄ ▄█''')    
     
@@ -63,8 +65,7 @@ def cadastrar_restaurante():
     voltar_menu()
 
 def listar_restaurante():
-    limpar_tela()
-    print('''
+    montar_cabecalho('''
     █░░ █ █▀ ▀█▀ ▄▀█   █▀▄ █▀▀   █▀█ █▀▀ █▀ ▀█▀ ▄▀█ █░█ █▀█ ▄▀█ █▄░█ ▀█▀ █▀▀ █▀
     █▄▄ █ ▄█ ░█░ █▀█   █▄▀ ██▄   █▀▄ ██▄ ▄█ ░█░ █▀█ █▄█ █▀▄ █▀█ █░▀█ ░█░ ██▄ ▄█\n''')
 
