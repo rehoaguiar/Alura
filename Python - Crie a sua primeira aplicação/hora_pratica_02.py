@@ -22,7 +22,7 @@ print('Solicite ao usuário que insira um número e, em seguida, use uma estrutu
 print(negrito('\nRESPOSTA:'))
 
 num_escolhido = int(input('Insira um número de sua preferência: '))
-if (num_escolhido % 2 == 0):
+if num_escolhido % 2 == 0:
     print(f'{num_escolhido} é par!')
 else:
     print(f'{num_escolhido} é ímpar!')
@@ -41,10 +41,10 @@ print(negrito('\nRESPOSTA:'))
 
 idade_user = int(input('Digite a sua idade: '))
 
-if (idade_user >= 0 and idade_user <= 12):
+if idade_user >= 0 and idade_user <= 12:
     print('Você é uma criança')
 
-elif (idade_user >= 13 and idade_user <= 18):
+elif idade_user >= 13 and idade_user <= 18:
     print('Você é um adolescente')
 
 else:
@@ -65,11 +65,11 @@ senha_correta = 'EuAmoTeteu<3'
 tentativa_user = input('Digite o usuário: ')
 tentativa_senha = input('Digite a senha: ')
 
-if(tentativa_user == user_correto and tentativa_senha == senha_correta):
+if tentativa_user == user_correto and tentativa_senha == senha_correta:
     print('O usuário e senha estão corretos!\nRealizando login...')
-elif (tentativa_user == user_correto and tentativa_senha != senha_correta):
+elif tentativa_user == user_correto and tentativa_senha != senha_correta:
     print('O usuário está correto mas a senha está incorreta!\nTente novamente...')
-elif(tentativa_user != user_correto and tentativa_senha == senha_correta):
+elif tentativa_user != user_correto and tentativa_senha == senha_correta:
     print('A senha está correto mas o usuário está incorreto!\nTente novamente...')
 else:
     print('Nem o usuário nem a senha estão corretos!\nTente novamente...')
@@ -93,13 +93,13 @@ print(negrito('\nRESPOSTA:'))
 coord_x = int(input('Digite a coordenada de x: '))
 coord_y = int(input('Digite a coordenada de y: '))
 
-if(coord_x > 0 and coord_y > 0):
+if coord_x > 0 and coord_y > 0:
     print('O plano se encontra no Primeiro Quadrante do plano cartesiano')
-elif(coord_x < 0 and coord_y > 0):
+elif coord_x < 0 and coord_y > 0:
     print('O plano se encontra no Segundo Quadrante do plano cartesiano')
-elif(coord_x < 0 and coord_y < 0):
+elif coord_x < 0 and coord_y < 0:
     print('O plano se encontra no Terceiro Quadrante do plano cartesiano')
-elif(coord_x > 0 and coord_y < 0):
+elif coord_x > 0 and coord_y < 0:
     print('O plano se encontra no Quarto Quadrante do plano cartesiano')
 else:
     print('O plano se encontra na origem ou no eixo do plano cartesiano')
