@@ -15,8 +15,7 @@ if response.status_code == 200:
         if nome_do_restaurante not in dados_restaurante:
             dados_restaurante[nome_do_restaurante] = []
         
-        dados_restaurante[nome_do_restaurante].append({
-            'item': item['Item'],
+        dados_restaurante[nome_do_restaurante].append({ 'item': item['Item'],
             'price': item['price'],
             'description': item['description']
         })
