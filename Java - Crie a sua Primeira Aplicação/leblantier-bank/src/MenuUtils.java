@@ -16,10 +16,22 @@ public class MenuUtils {
 
     // Métodos
     public static void mostrarBanner() {
-        System.out.println("""
-                Teste
+        System.out.print("""
+                \n\n
+                ██╗░░░░░███████╗██████╗░██╗░░░░░░█████╗░███╗░░██╗████████╗██╗███████╗██████╗░
+                ██║░░░░░██╔════╝██╔══██╗██║░░░░░██╔══██╗████╗░██║╚══██╔══╝██║██╔════╝██╔══██╗
+                ██║░░░░░█████╗░░██████╦╝██║░░░░░███████║██╔██╗██║░░░██║░░░██║█████╗░░██████╔╝
+                ██║░░░░░██╔══╝░░██╔══██╗██║░░░░░██╔══██║██║╚████║░░░██║░░░██║██╔══╝░░██╔══██╗
+                ███████╗███████╗██████╦╝███████╗██║░░██║██║░╚███║░░░██║░░░██║███████╗██║░░██║
+                ╚══════╝╚══════╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝╚══════╝╚═╝░░╚═╝
+                
+                ██████╗░░█████╗░███╗░░██╗██╗░░██╗
+                ██╔══██╗██╔══██╗████╗░██║██║░██╔╝
+                ██████╦╝███████║██╔██╗██║█████═╝░
+                ██╔══██╗██╔══██║██║╚████║██╔═██╗░
+                ██████╦╝██║░░██║██║░╚███║██║░╚██╗
+                ╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝
                 """);
-
     }
 
     public static void mostrarMenu() {
@@ -44,7 +56,7 @@ public class MenuUtils {
         return opcao;
     }
 
-    public void verificarOpcao(Scanner scanner, int opcao, ContaBancaria conta){
+    public void verificarOpcao(Scanner scanner, int opcao, ContaBancaria conta) {
         switch (opcao) {
             case 0:
                 System.out.println("\n----- Cadastrar Usuário -----");
@@ -71,12 +83,13 @@ public class MenuUtils {
                 break;
 
             default:
-                System.out.println("\nOpção Inválida! Escolha um número que exista no menu");
+                System.out.println("\nOpção Inválida! Escolha um número que exista no menu!");
         }
     }
 
     public void montarInterface(ContaBancaria conta, Scanner scanner) {
         while (opcao != 4) {
+            mostrarBanner();
             mostrarMenu();
             escolherOpcao(opcao, scanner);
             verificarOpcao(scanner, opcao, conta);

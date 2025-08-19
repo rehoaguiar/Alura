@@ -37,8 +37,14 @@ public class ContaBancaria extends Cliente {
         double valorTransferido;
         System.out.print("Informe o valor a ser transferido: ");
         valorTransferido = scanner.nextDouble();
-        saldoConta -= valorTransferido;
-        System.out.printf("Saldo atualizado R$ %.2f", saldoConta);
+
+        if (valorTransferido <= saldoConta) {
+            saldoConta -= valorTransferido;
+            System.out.printf("Saldo atualizado R$ %.2f", saldoConta);
+        } else {
+            System.out.println("O valor transferido não pode ser maior que o saldo da conta");
+        }
+
         scanner.nextLine();
     }
 
