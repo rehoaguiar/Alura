@@ -3,6 +3,7 @@ public class Pessoa {
         System.out.println("Olá, mundo");
     }
 
+    // Main
     public static void main(String[] args) {
         // Por se tratar de uma classe estática não precisamos utilizar o "new"
         // Não possui estado, somente lógica

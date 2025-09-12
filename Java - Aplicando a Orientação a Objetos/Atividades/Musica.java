@@ -26,6 +26,7 @@ public class Musica {
                         """, titulo, artista, anoLancamento, calcularMedia());
     }
 
+    // Main
     public static void main(String[] args) {
         // Classes de Instância precisar do "new" para conseguirmos utilizar os seus métodos e atributos
         // Cada objeto terá o seu próprio estado

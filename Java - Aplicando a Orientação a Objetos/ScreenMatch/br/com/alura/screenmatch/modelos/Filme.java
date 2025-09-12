@@ -1,12 +1,12 @@
-import java.io.PrintStream;
+package br.com.alura.screenmatch.modelos;
 
 public class Filme {
-    String nome;
-    int anoLancamento;
-    int duracaoMinutos;
-    int totalAvaliacoes;
-    double somaAvaliacoes;
-    Boolean inclusoPlano;
+    private String nome;
+    private int anoLancamento;
+    private int duracaoMinutos;
+    private int totalAvaliacoes;
+    private double somaAvaliacoes;
+    private Boolean inclusoPlano;
 
     // Construtor
     public Filme (String nome, int anoLancamento, int duracaoMinutos, Boolean inclusoPlano) {
@@ -15,6 +15,53 @@ public class Filme {
         this.duracaoMinutos = duracaoMinutos;
         this.inclusoPlano = inclusoPlano;
     }
+
+    // Getters e Setters
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getAnoLancamento() {
+        return anoLancamento;
+    }
+
+    public void setAnoLancamento(int anoLancamento) {
+        this.anoLancamento = anoLancamento;
+    }
+
+    public int getDuracaoMinutos() {
+        return duracaoMinutos;
+    }
+
+    public void setDuracaoMinutos(int duracaoMinutos) {
+        this.duracaoMinutos = duracaoMinutos;
+    }
+
+    public Boolean getInclusoPlano() {
+        return inclusoPlano;
+    }
+
+    public void setInclusoPlano(Boolean inclusoPlano) {
+        this.inclusoPlano = inclusoPlano;
+    }
+
+    public int getTotalAvaliacoes() {
+        return totalAvaliacoes;
+    }
+
+    public double getSomaAvaliacoes() {
+        return somaAvaliacoes;
+    }
+
+
+
+
+
 
     // Métodos
     public void exibirFichaTecnica() {
