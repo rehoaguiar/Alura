@@ -1,5 +1,5 @@
 public class Pessoa {
-    public static void falar(){
+    public static void falar() {
         System.out.println("Olá, mundo");
     }
 

@@ -12,11 +12,11 @@ public class Carro {
         this.ano = ano;
     }
 
-    public int calcularIdade(){
+    public int calcularIdade() {
         return (2025 - ano);
     }
 
-    public void exibirInformacoes(){
+    public void exibirInformacoes() {
         System.out.printf("""
                         --------- Informações Técnicas ---------
                         Marca: %s

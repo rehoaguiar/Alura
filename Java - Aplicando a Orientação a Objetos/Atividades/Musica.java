@@ -5,17 +5,17 @@ public class Musica {
     int anoLancamento;
     int numAvaliacoes;
 
-    public void avaliarMusica(double nota){
+    public void avaliarMusica(double nota) {
         somaNotas += nota;
         numAvaliacoes++;
     }
 
-    public double calcularMedia(){
+    public double calcularMedia() {
          double mediaAvaliacoes = somaNotas / numAvaliacoes;
          return Math.round(mediaAvaliacoes * 10.00) / 10.00;
     }
 
-    public void exibirFichaTecnica(){
+    public void exibirFichaTecnica() {
         System.out.printf("""
                         --------- Informações Técnicas ---------
                         Título: %s

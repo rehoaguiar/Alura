@@ -1,5 +1,5 @@
 public class Calculadora {
-    public static double dobrarNumero(double numero){
+    public static double dobrarNumero(double numero) {
         return numero * 2;
     }
 
