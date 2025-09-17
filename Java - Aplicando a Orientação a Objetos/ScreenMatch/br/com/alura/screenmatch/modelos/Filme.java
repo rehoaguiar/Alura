@@ -1,92 +1,34 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Filme {
-    private String nome;
-    private int anoLancamento;
-    private int duracaoMinutos;
-    private int totalAvaliacoes;
-    private double somaAvaliacoes;
-    private Boolean inclusoPlano;
+public class Filme extends Titulo {
+    String diretor;
 
     // Construtor
-    public Filme (String nome, int anoLancamento, int duracaoMinutos, Boolean inclusoPlano) {
-        this.nome = nome;
-        this.anoLancamento = anoLancamento;
-        this.duracaoMinutos = duracaoMinutos;
-        this.inclusoPlano = inclusoPlano;
+    public Filme (String nome, String diretor, int anoLancamento, int duracaoMinutos, Boolean inclusoPlano) {
+       super(nome, anoLancamento, duracaoMinutos, inclusoPlano);
+       this.diretor = diretor;
     }
 
-    // Getters e Setters
-
-    public String getNome() {
-        return nome;
+    public String getDiretor() {
+        return diretor;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
     }
 
-    public int getAnoLancamento() {
-        return anoLancamento;
-    }
-
-    public void setAnoLancamento(int anoLancamento) {
-        this.anoLancamento = anoLancamento;
-    }
-
-    public int getDuracaoMinutos() {
-        return duracaoMinutos;
-    }
-
-    public void setDuracaoMinutos(int duracaoMinutos) {
-        this.duracaoMinutos = duracaoMinutos;
-    }
-
-    public Boolean getInclusoPlano() {
-        return inclusoPlano;
-    }
-
-    public void setInclusoPlano(Boolean inclusoPlano) {
-        this.inclusoPlano = inclusoPlano;
-    }
-
-    public int getTotalAvaliacoes() {
-        return totalAvaliacoes;
-    }
-
-    public double getSomaAvaliacoes() {
-        return somaAvaliacoes;
-    }
-
-
-
-
-
-
-    // Métodos
+    @Override
     public void exibirFichaTecnica() {
         System.out.printf("""
                           ----------- Ficha Técnica -----------
                           Filme: %s
+                          Diretor: %s
                           Ano de Lançamento: %d
                           Duração em Minutos: %d
                           Média de Avaliações: %.1f
                           Incluso no plano: %s
                           -------------------------------------
-                          """, nome, anoLancamento, duracaoMinutos, calcularMedia(), inclusoPlano());
-    }
-
-    public void avaliar(double nota) {
-        somaAvaliacoes += nota;
-        totalAvaliacoes++;
-    }
-
-    public double calcularMedia() {
-        return Math.round(somaAvaliacoes / totalAvaliacoes * 10.00 ) / 10.00 ;
-    }
-
-    public String inclusoPlano() {
-        return inclusoPlano ? "Incluso" : "Não Incluso";
+                          """, getNome(), diretor, getDuracaoMinutos(), calcularMedia(), inclusoPlano());
     }
 
 }
