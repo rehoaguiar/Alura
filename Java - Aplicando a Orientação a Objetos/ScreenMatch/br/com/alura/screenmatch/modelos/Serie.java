@@ -52,7 +52,7 @@ public class Serie extends Titulo {
     @Override
     public void exibirFichaTecnica() {
         System.out.printf("""
-                          ----------- Ficha Técnica -----------
+                          ----------- Ficha Técnica de Série -----------
                           Título: %s
                           Ano de Lançamento: %d
                           Está concluída: %b
@@ -62,6 +62,7 @@ public class Serie extends Titulo {
                           Duração em Minutos: %d
                           Média de Avaliações: %.1f
                           Incluso no plano: %s
+                          -----------------------------------------------%n
                           """, getNome(), getAnoLancamento(), ativo, temporadas, episodiosPorTemporada, minutosPorEpisodios, getDuracaoMinutos(), calcularMedia(), inclusoPlano());
     }
 

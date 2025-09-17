@@ -1,3 +1,6 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -14,7 +17,24 @@ public class Main {
 
         filme.exibirFichaTecnica();
 
-        Serie serie = new Serie("Jujutsu Kaiser", 2020, 3, 23,23, true, true);
-        System.out.println(serie.getDuracaoMinutos());
+        Serie serie = new Serie("Jujutsu Kaisen", 2020, 3, 23,23, true, true);
+        serie.exibirFichaTecnica();
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNome("Ryomen Sukuna");
+        episodio.setSerie(serie);
+        episodio.setTotalVisualizacoes(10000);
+
+        episodio.exibirFichaTecnica();
+
+        // Código Omitido
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(filme);
+        calculadora.inclui(serie);
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filme);
+        filtro.filtra(episodio);
     }
 }

@@ -69,12 +69,13 @@ public class Titulo {
     // Métodos
     public void exibirFichaTecnica() {
         System.out.printf("""
-                          ----------- Ficha Técnica -----------
+                          ----------- Ficha Técnica de Título -----------
                           Título: %s
                           Ano de Lançamento: %d
                           Duração em Minutos: %d
                           Média de Avaliações: %.1f
                           Incluso no plano: %s
+                          -----------------------------------------------%n
                           """, nome, anoLancamento, duracaoMinutos, calcularMedia(), inclusoPlano());
     }
 

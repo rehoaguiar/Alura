@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Filme extends Titulo {
+import br.com.alura.screenmatch.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     String diretor;
 
     // Construtor
@@ -20,15 +22,19 @@ public class Filme extends Titulo {
     @Override
     public void exibirFichaTecnica() {
         System.out.printf("""
-                          ----------- Ficha Técnica -----------
+                          ----------- Ficha Técnica de Filme -----------
                           Filme: %s
                           Diretor: %s
                           Ano de Lançamento: %d
                           Duração em Minutos: %d
                           Média de Avaliações: %.1f
                           Incluso no plano: %s
-                          -------------------------------------
+                          ----------------------------------------------%n
                           """, getNome(), diretor, getAnoLancamento(), getDuracaoMinutos(), calcularMedia(), inclusoPlano());
     }
 
+    @Override
+    public int getClassificacao() {
+        return (int) calcularMedia() / 2;
+    }
 }
