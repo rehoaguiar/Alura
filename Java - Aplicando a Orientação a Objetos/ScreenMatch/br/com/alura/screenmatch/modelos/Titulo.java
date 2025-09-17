@@ -6,10 +6,10 @@ public class Titulo {
     private int duracaoMinutos;
     private int totalAvaliacoes;
     private double somaAvaliacoes;
-    private Boolean inclusoPlano;
+    private boolean inclusoPlano;
 
     // Construtor para filme
-    public Titulo (String nome, int anoLancamento, int duracaoMinutos, Boolean inclusoPlano) {
+    public Titulo (String nome, int anoLancamento, int duracaoMinutos, boolean inclusoPlano) {
         this.nome = nome;
         this.anoLancamento = anoLancamento;
         this.duracaoMinutos = duracaoMinutos;
@@ -17,7 +17,7 @@ public class Titulo {
     }
 
     // Construtor para série
-    public Titulo (String nome, int anoLancamento, Boolean inclusoPlano) {
+    public Titulo (String nome, int anoLancamento, boolean inclusoPlano) {
         this.nome = nome;
         this.anoLancamento = anoLancamento;
         this.duracaoMinutos = 0;
@@ -50,11 +50,11 @@ public class Titulo {
         this.duracaoMinutos = duracaoMinutos;
     }
 
-    public Boolean getInclusoPlano() {
+    public boolean getInclusoPlano() {
         return inclusoPlano;
     }
 
-    public void setInclusoPlano(Boolean inclusoPlano) {
+    public void setInclusoPlano(boolean inclusoPlano) {
         this.inclusoPlano = inclusoPlano;
     }
 
@@ -84,6 +84,9 @@ public class Titulo {
     }
 
     public double calcularMedia() {
+        if (totalAvaliacoes == 0) {
+            return 0.0;
+        }
         return Math.round(somaAvaliacoes / totalAvaliacoes * 10.00 ) / 10.00 ;
     }
 

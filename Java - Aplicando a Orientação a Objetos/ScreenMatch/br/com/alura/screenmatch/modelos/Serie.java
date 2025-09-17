@@ -16,6 +16,7 @@ public class Serie extends Titulo {
         this.setDuracaoMinutos(getDuracaoMinutos());
     }
 
+    // Getters e Setters
     public int getTemporadas() {
         return temporadas;
     }
@@ -40,16 +41,33 @@ public class Serie extends Titulo {
         this.episodiosPorTemporada = episodiosPorTemporada;
     }
 
+    public void setMinutosPorEpisodios(int minutosPorEpisodios) {
+        this.minutosPorEpisodios = minutosPorEpisodios;
+    }
+
     public int getMinutosPorEpisodios() {
         return minutosPorEpisodios;
     }
 
-    public void setMinutosPorEpisodios(int minutosPorEpisodios) {
-        this.minutosPorEpisodios = minutosPorEpisodios;
+    @Override
+    public void exibirFichaTecnica() {
+        System.out.printf("""
+                          ----------- Ficha Técnica -----------
+                          Título: %s
+                          Ano de Lançamento: %d
+                          Está concluída: %b
+                          Temporadas: %d
+                          Episódios por Temporada: %d
+                          Minutos por episódio: %d
+                          Duração em Minutos: %d
+                          Média de Avaliações: %.1f
+                          Incluso no plano: %s
+                          """, getNome(), getAnoLancamento(), ativo, temporadas, episodiosPorTemporada, minutosPorEpisodios, getDuracaoMinutos(), calcularMedia(), inclusoPlano());
     }
 
     @Override
     public int getDuracaoMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodios;
     }
+
 }

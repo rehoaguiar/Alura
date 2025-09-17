@@ -28,7 +28,7 @@ public class Filme extends Titulo {
                           Média de Avaliações: %.1f
                           Incluso no plano: %s
                           -------------------------------------
-                          """, getNome(), diretor, getDuracaoMinutos(), calcularMedia(), inclusoPlano());
+                          """, getNome(), diretor, getAnoLancamento(), getDuracaoMinutos(), calcularMedia(), inclusoPlano());
     }
 
 }
